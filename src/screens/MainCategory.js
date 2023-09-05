@@ -14,7 +14,7 @@ const MainCategory = () => {
   }, []);
 
   const getNews = () => {
-    fetch('https://saurav.tech/NewsAPI/everything/bbc-news.json')
+    fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=f03367ceebd244d39df6d385761b6078')
       .then(res => res.json())
       .then(output => {
         // console.log(output);
@@ -36,12 +36,12 @@ const MainCategory = () => {
       <View style={{marginTop: 20,flex:1, flexDirection:'column'  }}>
         <FlatList
           data={[
-            {title: 'technology', image: require('../images/tech.webp')},
+            {title: 'business', image: require('../images/tech.webp')},
+            {title: 'entertainment', image: require('../images/health.jpeg')},
+            {title: 'sports', image: require('../images/business.jpeg')},
+            {title: 'science', image: require('../images/tech.webp')},
             {title: 'health', image: require('../images/health.jpeg')},
-            {title: 'business', image: require('../images/business.jpeg')},
-            {title: 'technology', image: require('../images/tech.webp')},
-            {title: 'health', image: require('../images/health.jpeg')},
-            {title: 'business', image: require('../images/business.jpeg')},
+            {title: 'technology', image: require('../images/business.jpeg')},
           ]}
           numColumns={2}
           renderItem={({item, index}) => {

@@ -12,13 +12,16 @@ const CategoryNews = () => {
 
   const getNews = () => {
     fetch(
-      'https://saurav.tech/NewsAPI/top-headlines/category/' +
-        route.params.category +
-        '/in.json',
+      // 'https://saurav.tech/NewsAPI/top-headlines/category/' +
+      //   route.params.category +
+      //   '/in.json',
+
+      'https://newsapi.org/v2/top-headlines?country=in&apiKey=f03367ceebd244d39df6d385761b6078&category=' + route.params.category
     )
       .then(res => res.json())
       .then(output => {
-        console.log(output);
+        console.log(output.articles[urlToImage]);
+        
         setNews(output.articles);
       });
   };
