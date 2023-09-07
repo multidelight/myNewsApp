@@ -73,13 +73,13 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.mynewsapp"
+    namespace "com.inews"
     defaultConfig {
-        applicationId "com.mynewsapp"
+        applicationId "com.inews"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2"
     }
     signingConfigs {
         debug {

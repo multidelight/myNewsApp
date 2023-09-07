@@ -20,9 +20,22 @@ const CategoryNews = () => {
     )
       .then(res => res.json())
       .then(output => {
-        console.log(output.articles[urlToImage]);
+
         
-        setNews(output.articles);
+        const apiResponse = output
+          // Your API response here
+        ;
+        
+        // Filter out entries with null urlToImage
+        const filteredArticles = apiResponse.articles.filter(article => article.urlToImage !== null);
+        
+        // Now, filteredArticles contains only the entries with non-null urlToImage
+        console.log(filteredArticles);
+
+
+        // console.log(output.articles);
+        
+        setNews(filteredArticles);
       });
   };
   return (
