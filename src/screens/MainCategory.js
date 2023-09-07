@@ -19,7 +19,9 @@ const MainCategory = () => {
       .then(output => {
         // console.log(output);
         setNews(output.articles);
+        
       });
+      
   };
   return (
     <View style={{flex:1, backgroundColor:'#000'}}>
@@ -97,6 +99,6 @@ const MainCategory = () => {
   )
 }
 
-export default MainCategory
+export default MainCategory;
 
 
